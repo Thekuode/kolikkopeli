@@ -1,7 +1,11 @@
 from fastapi import APIRouter
 
+from services.roll_service import RollService
+
 router = APIRouter()
+
 
 @router.get("/roll")
 def roll():
-    return {"result": "heads"}
+    result = RollService().roll()
+    return result

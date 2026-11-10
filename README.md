@@ -4,5 +4,7 @@ Idean kolikkopelissä on yksinkertainen ns slottipeli, mutta pienellä twistill�
 
 ```powershell
 cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 python -m uvicorn main:app --reload
 ```
