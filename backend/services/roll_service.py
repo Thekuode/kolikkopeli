@@ -4,6 +4,7 @@ import random
 class RollService:
     """Kolmen rullan slotti. Voitto vain 3 samasta. RTP ≈ 96 %."""
     # TODO: pitää saada betti DB ja muuttaa sitä. Ja rtp muutos myös DB:ssä.
+    # TODO: käyttäjän luonti
 
     BET = 1
 
