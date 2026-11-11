@@ -6,5 +6,6 @@ Idean kolikkopelissä on yksinkertainen ns slottipeli, mutta pienellä twistill�
 cd backend
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 python -m uvicorn main:app --reload
 ```
