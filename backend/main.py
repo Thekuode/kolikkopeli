@@ -1,8 +1,19 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from db.seed import seed
 from routers import roll
 
-app = FastAPI(title="Kolikkopeli API")
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    seed()
+    yield
+
+
+app = FastAPI(title="Kolikkopeli API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -13,6 +24,7 @@ app.add_middleware(
 )
 
 app.include_router(roll.router, prefix="/api")
+
 
 @app.get("/")
 def root():
