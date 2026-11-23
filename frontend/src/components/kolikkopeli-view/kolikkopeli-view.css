@@ -1,0 +1,63 @@
+.kolikkopeli {
+  max-width: 28rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+button {
+  padding: 0.65rem 1.5rem;
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid #1a1a1a;
+  background: #f5e6c8;
+  color: #1a1a1a;
+}
+
+button:hover:not(:disabled) {
+  background: #ead7a8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #8b1a1a;
+}
+
+.tulos {
+  margin-top: 1.5rem;
+}
+
+.reels {
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1rem;
+  margin: 1rem 0 0;
+  text-align: left;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}

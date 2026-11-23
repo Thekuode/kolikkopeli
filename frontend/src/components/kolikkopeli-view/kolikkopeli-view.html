@@ -1,0 +1,30 @@
+<section class="kolikkopeli">
+  <h1>Kolikkopeli</h1>
+
+  <button type="button" (click)="spin()" [disabled]="loading()">
+    {{ loading() ? 'Pyörii…' : 'Pyöräytä' }}
+  </button>
+
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  @if (result(); as r) {
+    <div class="tulos">
+      <p class="reels">{{ r.reels.join(' | ') }}</p>
+      <p>{{ r.win ? 'Voitto!' : 'Ei voittoa' }}</p>
+      <dl>
+        <dt>Käyttäjä</dt>
+        <dd>{{ r.user }}</dd>
+        <dt>Panos</dt>
+        <dd>{{ r.bet }}</dd>
+        <dt>Payout</dt>
+        <dd>{{ r.payout }}</dd>
+        <dt>Netto</dt>
+        <dd>{{ r.net }}</dd>
+        <dt>Saldo</dt>
+        <dd>{{ r.balance }}</dd>
+      </dl>
+    </div>
+  }
+</section>
